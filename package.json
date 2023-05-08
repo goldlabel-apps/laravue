@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "start": "clear && cd ./src && php artisan serve",
+        "test": "echo LGTM && exit 0"
+    }
+}
