@@ -7,7 +7,7 @@
 cd <working-dir>
 git clone https://github.com/listingslab-software/laravue
 cd laravue
-npm run
+npm start
 ```
 
 #### Laravel background
