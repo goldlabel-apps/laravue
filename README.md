@@ -32,7 +32,7 @@ If you would like to build your frontend using Inertia and Vue / React, you can 
 
 #### Localisation
 
-Because it might as well be in feckin Chinese, right?
+Because it might as well be in Chinese, right?
 
 👉 美人鱼 🧜  
 🧜 美人鱼   
