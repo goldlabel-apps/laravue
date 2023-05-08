@@ -29,3 +29,21 @@ In addition, developers are left maintaining two separate code repositories, oft
 #### [Starter Kits](https://laravel.com/docs/10.x/frontend#inertia-starter-kits)
 
 If you would like to build your frontend using Inertia and Vue / React, you can leverage our Breeze or Jetstream starter kits to jump-start your application's development. Both of these starter kits scaffold your application's backend and frontend authentication flow using Inertia, Vue / React, Tailwind, and Vite so that you can start building your next big idea
+
+#### Localisation
+
+Because it might as well be in feckin Chinese, right?
+
+👉 美人鱼 🧜  
+🧜 美人鱼   
+👼 天使  
+是的，🤙 兄弟  
+👌 太完美了  
+👉 看看这里  
+那🤟是🤟老🤟学🤟校🤟   
+🦹‍♀️ 超级反派女人  
+是的，兄弟 🤙
+ 👌 太完美了
+👉 看看这里  
+那 🤟 是 🤙 老 🤟 学 🧜‍♂️ 校 🤟
+🦹‍♀️ 超级反派女人
