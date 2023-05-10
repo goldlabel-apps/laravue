@@ -1,3 +1,4 @@
+import Vue from 'vue'
 
 <template>
   <div>
@@ -8,7 +9,6 @@
 <script>
   export default {
     setup() {
-      
 
     }
   }
