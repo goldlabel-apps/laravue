@@ -55,3 +55,13 @@ cd laravue
 npm i
 npm start
 ```
+## ! Error
+
+![screenshot](./movies/public/png/bad.png)
+
+
+OK, so that's bad & a potential timesink, so let's for now assume that we have a valid GraphQL server we can query
+
+### Create new Vue App
+
+- Using the Vue version of Material UI, which is called XXXXXX
