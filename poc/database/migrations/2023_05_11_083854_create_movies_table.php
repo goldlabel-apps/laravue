@@ -11,10 +11,10 @@ class CreateMoviesTable extends Migration
      */
     public function up()
     {
-        Schema::create(movies, function (Blueprint $table) {
+        Schema::create("movies", function (Blueprint $table) {
             $table->id();
             $table->string("title");
-            $table->text(director);
+            $table->text("director");
             $table->string("language");
             $table->string("year_released");
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateMoviesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(‘movies’);
+        Schema::dropIfExists("movies");
     }
 }
