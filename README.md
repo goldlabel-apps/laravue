@@ -62,6 +62,14 @@ npm start
 
 OK, so that's bad & a potential timesink, so let's for now assume that we have a valid GraphQL server we can query
 
-### Create new Vue App
+### New Vue App
 
-- Using the Vue version of Material UI, which is called XXXXXX
+The idea here is to create an entirely independent Vue component/app/microfrontend/microapp (call it what you like) which can connect to the GraphQL API we created above. Too easy. The trick will be making one which allow developers to easily port exising Vue components into the same pattern.
+
+#### Vue CLI
+
+Use the [CLI tool](https://github.com/vuejs/create-vue) to create a new Vue App
+
+- Using a Vue version of Material UI, [vuematerial](https://www.creative-tim.com/vuematerial/)
+- Using Vite https://vitejs.dev/guide/
+
