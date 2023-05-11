@@ -1,7 +1,6 @@
 {
-  "name": "vue-project",
-  "version": "0.0.0",
-  "private": true,
+  "name": "vue-graphql",
+  "version": "1.0.1",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
