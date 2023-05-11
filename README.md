@@ -75,3 +75,7 @@ Use the [CLI tool](https://github.com/vuejs/create-vue) to create a new Vue App
 
 - Vite https://vitejs.dev/guide/
 - Using a Vue version of Material UI, [vuematerial](https://www.creative-tim.com/vuematerial/)
+
+#### Theme
+primary #4C979C
+secondary #134448
