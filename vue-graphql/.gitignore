@@ -1,6 +1,8 @@
 .env.development
 .env.production
 
+.firebase
+
 # Logs
 logs
 *.log

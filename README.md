@@ -1,6 +1,6 @@
 ## Laravue
 
-https://laravue.onrender.com
+Working Example [on Firebase](https://listingslab-laravue.web.app)
 
 > __Story__ Investigate possible approaches to porting a monolithic Laravel/Vue applications into multiple, more scaleable, more manageable and modern apps 
 
@@ -81,3 +81,6 @@ Use the [CLI tool](https://github.com/vuejs/create-vue) to create a new Vue App
 #### Theme
 primary #4C979C
 secondary #134448
+
+#### Firebase
+
