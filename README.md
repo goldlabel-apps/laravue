@@ -55,14 +55,15 @@ cd laravue
 npm i
 npm start
 ```
-## ! Error
+> ## !! Error
 
 ![screenshot](./movies/public/png/bad.png)
 
+yeh... that's bad. And a potential time-sink, so let's for now assume that we HAVE a valid GraphQL/Laravel. 
 
-OK, so that's bad & a potential timesink, so let's for now assume that we have a valid GraphQL server we can query
+We haven't, so let's replace that piece temporarily with Mock GraphQL API from [mocki.io](https://mocki.io/graphql)
 
-### New Vue App
+### Create New Vue App with Vite & vuematerial
 
 The idea here is to create an entirely independent Vue component/app/microfrontend/microapp (call it what you like) which can connect to the GraphQL API we created above. Too easy. The trick will be making one which allow developers to easily port exising Vue components into the same pattern.
 
@@ -70,6 +71,7 @@ The idea here is to create an entirely independent Vue component/app/microfronte
 
 Use the [CLI tool](https://github.com/vuejs/create-vue) to create a new Vue App
 
-- Using a Vue version of Material UI, [vuematerial](https://www.creative-tim.com/vuematerial/)
-- Using Vite https://vitejs.dev/guide/
+#### Dependencies
 
+- Vite https://vitejs.dev/guide/
+- Using a Vue version of Material UI, [vuematerial](https://www.creative-tim.com/vuematerial/)
