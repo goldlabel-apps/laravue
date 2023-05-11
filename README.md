@@ -23,14 +23,9 @@ $ composer require rebing/graphql-laravel
 
 If all new features/components development speak to the same GraphQL API by default, then you have a situation where the Laravel LAMP backend starts to sepearate from the frontend micro-app components. At the same time, the Existing backend is does not need to change, so backward compatibility is avaioded
 
-
-
 #### Proof of Concept (Movies)
 
 __Note:__ If a POC takes too long to make, then the concept might need another think  
-
-
-
 
 [🤙 Movies](./movies)
 
