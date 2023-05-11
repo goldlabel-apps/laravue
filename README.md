@@ -4,10 +4,14 @@
 
 #### Overview 
 
-If a POC takes too long to make, then the concept might need another think  
-Perhaps GraphQL could be the key  
-It's easy to teach the old system to speak GraphQL  
-Any new features/components speak the same by default  
+
+
+#### Local Techstack required
+
+- PHP 7+
+- Composer 2.0
+- Docker 20.10.6 (Any other version is fine)
+- Docker-Compose 1.29.1 (Any other version is fine)
 
 [🤙 Proof of Concept](./poc)
 
@@ -18,6 +22,3 @@ cd laravue
 npm i
 npm start
 ```
-
-#### Localise
-是的，兄弟
