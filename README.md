@@ -1,8 +1,8 @@
 ## Laravue
 
-> __Agile story__ Investigate possible approaches to porting a monolithic Laravel/Vue applications into multiple, more scaleable, more manageable and modern apps 
+> __Story__ Investigate possible approaches to porting a monolithic Laravel/Vue applications into multiple, more scaleable, more manageable and modern apps 
 
-#### Overview 
+### Overview 
 
 The problem lies [here](https://blog.logrocket.com/create-single-page-app-laravel-and-vue/#why-are-laravel-and-vue-good-together)
 
@@ -12,7 +12,7 @@ Not long ago the befefits of using a tightly integrated approach to Laravel/Vue 
 
 Although reasonable, that can result in a monolithic app and is no longer desirable  
 
-###### One possible approach
+#### Possible approach
 
 GraphQL could be help. It's easy to teach the existing system to speak GraphQL ising a laravel plugin like **rebing/graphql-laravel**
 
@@ -25,19 +25,16 @@ If all new features/components development speak to the same GraphQL API by defa
 
 ___
 
-#### Proof of Concept (Movies)
-
-__Note:__ If a POC takes too long to make, then the concept might need another think  
+### Proof of Concept (Movies)
 
 [🤙 Movies](./movies)
+
+__Note:__ If a POC takes too long to make, then the concept might need re-think
 
 #### Required
 
 - PHP 7+
 - Composer 2.0
-- Docker 20.10.6 (Any other version is fine)
-- Docker-Compose 1.29.1 (Any other version is fine)
-
 
 #### Good to have
 
@@ -45,7 +42,11 @@ __Note:__ If a POC takes too long to make, then the concept might need another t
 - Basic knowledge of GraphQL (in theory)
 - Some knowledge of PHP (Syntax, OOP, and more)
 
-#### Developer
+#### Walkthrough
+
+Start by working through this [tutorial](https://www.atatus.com/blog/how-to-use-laravel-to-create-a-graphql-api/) whose goal is to 
+
+> Teach some of the core ideas needed to create a GraphQL API that uses Laravel. We will take a novel way to construct REST APIs in this lesson, which departs from traditional architecture. We'll create a theatre (movie list) API that can do CRUD (Create, Read, Update, Delete) actions on data in your database to help us learn more about GraphQL
 
 ```bash
 cd <working-dir>
@@ -54,9 +55,3 @@ cd laravue
 npm i
 npm start
 ```
-
-###### Walkthrough
-
-Start by working through this [tutorial](https://www.atatus.com/blog/how-to-use-laravel-to-create-a-graphql-api/) whose goal is to 
-
-> Teach some of the core ideas needed to create a GraphQL API that uses Laravel. We will take a novel way to construct REST APIs in this lesson, which departs from traditional architecture. We'll create a theatre (movie list) API that can do CRUD (Create, Read, Update, Delete) actions on data in your database to help us learn more about GraphQL
