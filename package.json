@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "start": "clear && cd ./poc && php artisan serve",
+        "start": "echo What should I start? && exit 0",
         "test": "echo LGTM && exit 0"
     }
 }
