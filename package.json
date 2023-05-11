@@ -1,8 +1,9 @@
 {
     "name": "vue-graphql",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "scripts": {
         "start": "clear && cd vue-graphql && npm run dev",
-        "test": "echo LGTM && exit 0"
+        "test": "clear && cd vue-graphql && npm run test:unit",
+        "deploy": "clear && firebase deploy"
     }
 }

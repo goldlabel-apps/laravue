@@ -5,7 +5,7 @@ import AppTitle from '../AppTitle.vue'
 
 describe('HelloWorld', () => {
   it('renders properly', () => {
-    const wrapper = mount(AppTitle, { props: { msg: 'Hello Vitest' } })
-    expect(wrapper.text()).toContain('Hello Vitest')
+    const wrapper = mount(AppTitle, { props: { msg: 'Laravue' } })
+    expect(wrapper.text()).toContain('Laravue')
   })
 })
