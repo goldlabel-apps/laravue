@@ -23,18 +23,27 @@ $ composer require rebing/graphql-laravel
 
 If all new features/components development speak to the same GraphQL API by default, then you have a situation where the Laravel LAMP backend starts to sepearate from the frontend micro-app components. At the same time, the Existing backend is does not need to change, so backward compatibility is avaioded
 
+___
+
 #### Proof of Concept (Movies)
 
 __Note:__ If a POC takes too long to make, then the concept might need another think  
 
 [🤙 Movies](./movies)
 
-#### Local Techstack
+#### Required
 
 - PHP 7+
 - Composer 2.0
 - Docker 20.10.6 (Any other version is fine)
 - Docker-Compose 1.29.1 (Any other version is fine)
+
+
+#### Good to have
+
+- Basic knowledge of Laravel (Eloquent, Migrations, MVC, Routes, and more)
+- Basic knowledge of GraphQL (in theory)
+- Some knowledge of PHP (Syntax, OOP, and more)
 
 #### Developer
 
