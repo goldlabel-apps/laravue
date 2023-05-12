@@ -1,8 +1,5 @@
 # ![screenshot](./vue-graphql/src/assets/icon32.svg) Laravue
 
-> Investigates porting monolithic Laravel/Vue applications to more scaleable, more manageable, more modern architecture
+> As a developer I want to investigate possible approaches to porting tightly integrated Laravel/Vue App into a more scaleable, more manageable and more modern architecture
 
-
-
-[🔓 listingslab-laravue.web.app](https://listingslab-laravue.web.app)
-
+[DEMO](https://listingslab-laravue.web.app/)
