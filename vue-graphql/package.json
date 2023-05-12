@@ -1,7 +1,7 @@
 {
   "name": "vue-graphql",
   "version": "1.0.3",
-  "description": "Investigate porting monolithic Laravel/Vue applications to more scaleable, more manageable, more modern architecture",
+  "description": "Investigates porting monolithic Laravel/Vue applications to more scaleable, more manageable, more modern architecture",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
