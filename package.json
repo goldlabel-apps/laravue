@@ -1,6 +1,6 @@
 {
     "name": "vue-graphql",
-    "description": "Investigate porting monolithic Laravel/Vue applications to more scaleable, more manageable, more modern architecture",
+    "description": "Investigates porting monolithic Laravel/Vue applications to more scaleable, more manageable, more modern architecture",
     "version": "1.0.3",
     "scripts": {
         "start": "clear && npm run start:vue",
