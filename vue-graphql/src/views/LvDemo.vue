@@ -1,10 +1,26 @@
+<script lang="ts">
+import gql from 'graphql-tag'
+export default {
+  apollo: {
+    // Simple query that will update the 'hello' vue property
+    hello: gql`query {
+      hello
+    }`,
+  },
+}
+</script>
+
 <template>
     <div class="node">
+        
+
         <h2 class="title">
             Aplollo GraphQL Demo
         </h2>
+
+        <div>{{ hello }}</div>
         <p>
-          Here we can see the Vue microapp using Apollo to query the <a
+          Vue microapp uses Apollo to query the <a
                 class="text-link"
                 title="mocki" 
                 href="https://mocki.io/graphql"
@@ -15,9 +31,8 @@
           endpoint; https://api.mocki.io/v2/c4d7a195/graphql
         </p>
         
-        <p>
-          Clicking "Do it" will do the following query;
-        </p>
+        
+        
         <p>
           <code>
               {<br />
@@ -43,11 +58,16 @@
         </p>
 
 
-        <p class="push">
-          <a href="?doit-doit" class="button-link">
-            Query mocki API
-          </a>
-        </p>
+        <!-- 
+          <p>
+            Click the button to load the following query asynchronously;
+          </p>
+          <p class="push">
+            <a href="?doit-doit" class="button-link">
+              Query mocki API
+            </a>
+        </p> -->
+        
     </div>
 </template>
 

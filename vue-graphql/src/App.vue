@@ -34,7 +34,7 @@
         </RouterLink>
 
         <RouterLink 
-          to="/graphql" 
+          to="/demo" 
           class="nav-link">
           Demo
         </RouterLink>

@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Start from '../views/LvStart.vue'
 import Hypothesis from '../views/LvHypothesis.vue'
 import Results from '../views/LvResults.vue'
-import LvGraphQL from '../views/LvGraphQL.vue'
+import LvDemo from '../views/LvDemo.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,9 +23,9 @@ const router = createRouter({
       component: Results,
     },
     {
-      path: '/graphql',
-      name: 'graphql',
-      component: LvGraphQL,
+      path: '/demo',
+      name: 'demo',
+      component: LvDemo,
     },
   ]
 })

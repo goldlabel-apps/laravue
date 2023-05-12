@@ -74,7 +74,7 @@
 
         <p class="push">
           <RouterLink 
-              to="/graphql" 
+              to="/demo" 
               class="button-link">
             Demo
           </RouterLink>
