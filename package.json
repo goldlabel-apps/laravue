@@ -1,6 +1,6 @@
 {
     "name": "laravue",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "scripts": {
         "start": "clear && npm run start:vue",
         "build:laravel": "clear && cd laravel-graphql && npm run dev",
