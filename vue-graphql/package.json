@@ -1,6 +1,7 @@
 {
   "name": "vue-graphql",
-  "version": "1.0.1",
+  "version": "1.0.3",
+  "description": "Investigates porting monolithic Laravel/Vue applications to more scaleable, more manageable, more modern architecture",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -14,6 +15,7 @@
   "dependencies": {
     "pinia": "^2.0.35",
     "vue": "^3.2.47",
+    "vue-material": "^1.0.0-beta-16",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {

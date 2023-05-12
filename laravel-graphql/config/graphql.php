@@ -1,33 +1,57 @@
 <?php
 
-// listingslab
-
 declare(strict_types = 1);
 
 return [
-    'route' => [
-        // The prefix for routes; do NOT use a leading slash!
-        'prefix' => 'graphql',
+    // The prefix for routes
+    'prefix' => 'graphql',
 
-        // The controller/method to use in GraphQL request.
-        // Also supported array syntax: `[\Rebing\GraphQL\GraphQLController::class, 'query']`
-        'controller' => \Rebing\GraphQL\GraphQLController::class . '@query',
+    // The routes to make GraphQL request. Either a string that will apply
+    // to both query and mutation or an array containing the key 'query' and/or
+    // 'mutation' with the according Route
+    //
+    // Example:
+    //
+    // Same route for both query and mutation
+    //
+    // 'routes' => 'path/to/query/{graphql_schema?}',
+    //
+    // or define each route
+    //
+    // 'routes' => [
+    //     'query' => 'query/{graphql_schema?}',
+    //     'mutation' => 'mutation/{graphql_schema?}',
+    // ]
+    //
+    'routes' => '{graphql_schema?}',
 
-        // Any middleware for the graphql route group
-        // This middleware will apply to all schemas
-        'middleware' => [],
+    // The controller to use in GraphQL request. Either a string that will apply
+    // to both query and mutation or an array containing the key 'query' and/or
+    // 'mutation' with the according Controller and method
+    //
+    // Example:
+    //
+    // 'controllers' => [
+    //     'query' => '\Rebing\GraphQL\GraphQLController@query',
+    //     'mutation' => '\Rebing\GraphQL\GraphQLController@mutation'
+    // ]
+    //
+    'controllers' => \Rebing\GraphQL\GraphQLController::class . '@query',
 
-        // Additional route group attributes
-        //
-        // Example:
-        //
-        // 'group_attributes' => ['guard' => 'api']
-        //
-        'group_attributes' => [],
-    ],
+    // Any middleware for the graphql route group
+    'middleware' => [],
 
-    // The name of the default schema
-    // Used when the route group is directly accessed
+    // Additional route group attributes
+    //
+    // Example:
+    //
+    // 'route_group_attributes' => ['guard' => 'api']
+    //
+    'route_group_attributes' => [],
+
+    // The name of the default schema used when no argument is provided
+    // to GraphQL::schema() or when the route is used without the graphql_schema
+    // parameter.
     'default_schema' => 'default',
 
     'batching' => [
@@ -44,11 +68,12 @@ return [
     //
     // Example:
     //
+    //  'schema' => 'default',
+    //
     //  'schemas' => [
     //      'default' => [
-    //          'controller' => MyController::class . '@method',
     //          'query' => [
-    //              App\GraphQL\Queries\UsersQuery::class,
+    //              'users' => App\GraphQL\Query\UsersQuery::class
     //          ],
     //          'mutation' => [
     //
@@ -56,7 +81,7 @@ return [
     //      ],
     //      'user' => [
     //          'query' => [
-    //              App\GraphQL\Queries\ProfileQuery::class,
+    //              'profile' => App\GraphQL\Query\ProfileQuery::class
     //          ],
     //          'mutation' => [
     //
@@ -65,7 +90,7 @@ return [
     //      ],
     //      'user/me' => [
     //          'query' => [
-    //              App\GraphQL\Queries\MyProfileQuery::class,
+    //              'profile' => App\GraphQL\Query\MyProfileQuery::class
     //          ],
     //          'mutation' => [
     //
@@ -77,46 +102,42 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                // ExampleQuery::class,
+                'quest' => \App\GraphQL\Queries\Quest\QuestQuery::class,
+                'quests' => \App\GraphQL\Queries\Quest\QuestsQuery::class,
+                'category' => \App\GraphQL\Queries\Category\CategoryQuery::class,
+                'categories' => \App\GraphQL\Queries\Category\CategoriesQuery::class,
             ],
             'mutation' => [
-                // ExampleMutation::class,
+                'createQuest' => \App\GraphQL\Mutations\Quest\CreateQuestMutation::class,
+                'updateQuest' => \App\GraphQL\Mutations\Quest\UpdateQuestMutation::class,
+                'deleteQuest' => \App\GraphQL\Mutations\Quest\DeleteQuestMutation::class,
+                'createCategory' => \App\GraphQL\Mutations\Category\CreateCategoryMutation::class,
+                'updateCategory' => \App\GraphQL\Mutations\Category\UpdateCategoryMutation::class,
+                'deleteCategory' => \App\GraphQL\Mutations\Category\DeleteCategoryMutation::class,
             ],
-            // The types only available in this schema
-            'types' => [
-                // ExampleType::class,
-            ],
-
-            // Laravel HTTP middleware
-            'middleware' => null,
-
-            // Which HTTP methods to support; must be given in UPPERCASE!
-            'method' => ['GET', 'POST'],
-
-            // An array of middlewares, overrides the global ones
-            'execution_middleware' => null,
+            'middleware' => [],
+            'method' => ['get', 'post'],
         ],
     ],
 
-    // The global types available to all schemas.
-    // You can then access it from the facade like this: GraphQL::type('user')
+    // The types available in the application. You can then access it from the
+    // facade like this: GraphQL::type('user')
     //
     // Example:
     //
     // 'types' => [
-    //     App\GraphQL\Types\UserType::class
+    //     App\GraphQL\Type\UserType::class
     // ]
     //
     'types' => [
-        // ExampleType::class,
-        // ExampleRelationType::class,
-        // \Rebing\GraphQL\Support\UploadType::class,
+       'Quest' => \App\GraphQL\Types\QuestType::class,
+       'Category' => \App\GraphQL\Types\CategoryType::class
     ],
 
     // The types will be loaded on demand. Default is to load all types on each request
     // Can increase performance on schemes with many types
     // Presupposes the config type key to match the type class name property
-    'lazyload_types' => true,
+    'lazyload_types' => false,
 
     // This callable will be passed the Error object for each errors GraphQL catch.
     // The method should return an array representing the error.
@@ -135,6 +156,9 @@ return [
      * The default handler will pass exceptions to laravel Error Handling mechanism
      */
     'errors_handler' => [\Rebing\GraphQL\GraphQL::class, 'handleErrors'],
+
+    // You can set the key, which will be used to retrieve the dynamic variables
+    'params_key' => 'variables',
 
     /*
      * Options to limit the query complexity and depth. See the doc
@@ -163,7 +187,7 @@ return [
      * Config for GraphiQL (see (https://github.com/graphql/graphiql).
      */
     'graphiql' => [
-        'prefix' => 'graphiql', // Do NOT use a leading slash
+        'prefix' => '/graphiql',
         'controller' => \Rebing\GraphQL\GraphQLController::class . '@graphiql',
         'middleware' => [],
         'view' => 'graphql::graphiql',
@@ -201,12 +225,6 @@ return [
     /*
      * Automatic Persisted Queries (APQ)
      * See https://www.apollographql.com/docs/apollo-server/performance/apq/
-     *
-     * Note 1: this requires the `AutomaticPersistedQueriesMiddleware` being enabled
-     *
-     * Note 2: even if APQ is disabled per configuration and, according to the "APQ specs" (see above),
-     *         to return a correct response in case it's not enabled, the middleware needs to be active.
-     *         Of course if you know you do not have a need for APQ, feel free to remove the middleware completely.
      */
     'apq' => [
         // Enable/Disable APQ - See https://www.apollographql.com/docs/apollo-server/performance/apq/#disabling-apq
@@ -218,18 +236,7 @@ return [
         // The cache prefix
         'cache_prefix' => config('cache.prefix') . ':graphql.apq',
 
-        // The cache ttl in seconds - See https://www.apollographql.com/docs/apollo-server/performance/apq/#adjusting-cache-time-to-live-ttl
+        // The cache ttl in minutes - See https://www.apollographql.com/docs/apollo-server/performance/apq/#adjusting-cache-time-to-live-ttl
         'cache_ttl' => 300,
-    ],
-
-    /*
-     * Execution middlewares
-     */
-    'execution_middleware' => [
-        \Rebing\GraphQL\Support\ExecutionMiddleware\ValidateOperationParamsMiddleware::class,
-        // AutomaticPersistedQueriesMiddleware listed even if APQ is disabled, see the docs for the `'apq'` configuration
-        \Rebing\GraphQL\Support\ExecutionMiddleware\AutomaticPersistedQueriesMiddleware::class,
-        \Rebing\GraphQL\Support\ExecutionMiddleware\AddAuthUserContextValueMiddleware::class,
-        // \Rebing\GraphQL\Support\ExecutionMiddleware\UnusedVariablesMiddleware::class,
     ],
 ];
