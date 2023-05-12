@@ -1,6 +1,6 @@
 # ![screenshot](./vue-graphql/src/assets/icon32.svg) Laravue
 
-> Investigates porting monolithic Laravel/Vue applications to more scaleable, more manageable, more modern architecture
+> Investigates porting monolithic Laravel/Vue apps to more scaleable, more manageable, more modern architecture
 
 
 

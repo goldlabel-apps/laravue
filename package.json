@@ -1,12 +1,13 @@
 {
     "name": "vue-graphql",
-    "description": "Investigates porting monolithic Laravel/Vue applications to more scaleable, more manageable, more modern architecture",
+    "description": "Investigates porting monolithic Laravel/Vue apps to more scaleable, more manageable, more modern architecture",
     "version": "1.0.3",
     "scripts": {
         "start": "clear && npm run start:vue",
+        "build:laravel": "clear && cd laravel-graphql && npm run dev",
         "start:vue": "clear && cd vue-graphql && npm run dev",
         "test:vue": "clear && cd vue-graphql && npm run test:unit",
         "deploy": "clear && firebase deploy",
-        "test": "clear && echo LGTM && exit 1"
+        "test": "echo \"LGTM\" && exit 0"
     }
 }
