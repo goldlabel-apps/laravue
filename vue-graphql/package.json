@@ -1,8 +1,8 @@
 {
   "name": "vue-graphql",
-  "version": "1.0.4",
-  "description": "Investigates porting monolithic Laravel/Vue apps to more scaleable, more manageable, more modern architecture",
+  "version": "1.0.5",
   "scripts": {
+    "start": "npm run dev",
     "dev": "vite",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
@@ -34,6 +34,7 @@
     "jsdom": "^22.0.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.8",
+    "sass": "^1.62.1",
     "typescript": "~5.0.4",
     "vite": "^4.3.4",
     "vitest": "^0.31.0",
