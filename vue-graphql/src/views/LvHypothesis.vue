@@ -4,17 +4,13 @@
             Hypothesis
         </h2>
         <p>
-            It should be possible to fork a Laravel App and add GraphQL superpowers 
-            using a library like <a href="https://github.com/rebing/graphql-laravel" 
+            It should be possible to add GraphQL to a Laravel App using a 
+            library like <a href="https://github.com/rebing/graphql-laravel" 
                                     target="_blank" 
                                     class="text-link">
                                       rebing/graphql-laravel
-                                  </a>. 
-            
-        </p>
-        <p>
-          This would offer a single GraphQL API endpoint queryable by any decoupled 
-            Vue, React or Vanilla JS app. Let’s call these <strong>micro-apps</strong>
+                                  </a>. This offers a single GraphQL API endpoint queryable 
+            by any decoupled Vue, React or Vanilla JS app. Let’s call these <strong>micro-apps</strong>
         </p>
         <p>
             These are static and easy to deploy anywhere, needing no backend. 

@@ -13,8 +13,11 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "apollo-boost": "^0.4.9",
+    "graphql": "^16.6.0",
     "pinia": "^2.0.35",
     "vue": "^3.2.47",
+    "vue-apollo": "^3.1.0",
     "vue-material": "^1.0.0-beta-16",
     "vue-router": "^4.1.6"
   },
@@ -38,6 +41,7 @@
     "typescript": "~5.0.4",
     "vite": "^4.3.4",
     "vitest": "^0.31.0",
+    "vue-cli-plugin-apollo": "~0.22.2",
     "vue-tsc": "^1.6.4"
   }
 }
