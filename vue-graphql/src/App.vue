@@ -5,17 +5,8 @@ import AppTitle from './components/AppTitle.vue'
 
 <template>
   <header>
-    <a href="/?reset">
-      <img 
-        alt="Laravue " 
-        class="logo" 
-        src="@/assets/logo.svg" 
-        width="75" 
-        height="75" 
-      />
-    </a>
     <AppTitle msg="Laravue" />
-    <div class="wrapper">
+    <div>
       <nav>
         <RouterLink to="/story">
           Story
@@ -24,7 +15,6 @@ import AppTitle from './components/AppTitle.vue'
           Overview
         </RouterLink>
       </nav>
-      
     </div>
   </header>
   <RouterView />
