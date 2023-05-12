@@ -34,9 +34,9 @@
         </RouterLink>
 
         <RouterLink 
-          to="/conclusion" 
+          to="/graphql" 
           class="nav-link">
-          Conclusion
+          Demo
         </RouterLink>
         
       </nav>
@@ -52,7 +52,7 @@
   .laravue{
     margin: auto;
     height: 100vh;
-    max-width: 450px;
+    max-width: 650px;
     
   }
   .laravue a {
@@ -63,8 +63,6 @@
   }
   .lv-wrapper{
     margin-top: 8px;
-    /* border-top: 1px solid #4C979C; */
-    border-bottom: 1px dotted #4C979C;
     padding-top: 8px;
     padding-bottom: 32px;
     display: flex;

@@ -6,21 +6,28 @@
 
         <ol>
           <li>
-            <p><a
+            <p>Use <a
               class="text-link"
               title="create-vue" 
               href="https://github.com/listingslab-software/laravue/tree/master/vue-graphql"
               target="_blank"
               rel="noreferrer">
               create-vue
-            </a> bootstraps micro-app into the `/vue-graphql` directory</p>
-            <a
+            </a> to bootstrap a new Vue app here <a
               class="text-link"
-              title="laravue" 
+              title="github" 
               href="https://github.com/listingslab-software/laravue/tree/master/vue-graphql"
               target="_blank"
               rel="noreferrer">
               /vue-graphql
+            </a> &amp; Deploy Static Vue build to Firebase</p>
+            <a
+              class="text-link"
+              title="listingslab laravue" 
+              href="https://listingslab-laravue.web.app"
+              target="_blank"
+              rel="noreferrer">
+              🔓 listingslab-laravue.web.app
             </a>
           </li>
           <li>
@@ -35,9 +42,12 @@
               rel="noreferrer">
               /laravel-graphql
             </a>
+
+
           </li>
           <li>
-            To workaround the lack of GraphQL API, I swapped to using any old GraphQL API. Specifically, . 
+            To workaround the lack of GraphQL API, I swapped to using this GraphQL API 
+            and Then use Apollo to grab some data from the mock api
             <p>
                 <a
                 class="text-link"
@@ -55,41 +65,18 @@
                 target="_blank"
                 rel="noreferrer">
                 playground
-              </a>. 
+              </a>
             </p>
-            <code>
-              {<br />
-              &nbsp;&nbsp;todos  {<br />
-              &nbsp;&nbsp;&nbsp;&nbsp;id<br />
-              &nbsp;&nbsp;&nbsp;&nbsp;description<br />
-              &nbsp;&nbsp}<br />
-              }<br /><br />
-            </code>
           </li>
           
-          <li>
-            <p>Deployed microapp top Firebase</p>
-            <a
-              class="text-link"
-              title="listingslab laravue" 
-              href="https://listingslab-laravue.web.app"
-              target="_blank"
-              rel="noreferrer">
-              🔓 listingslab-laravue.web.app
-            </a>
-          </li>
-
-          <li>
-            Used Apollo to grab some data from the mock api
-          </li>
           
         </ol>
 
         <p class="push">
           <RouterLink 
-              to="/conclusion" 
+              to="/graphql" 
               class="button-link">
-            Conclusion
+            Demo
           </RouterLink>
         </p>
 
