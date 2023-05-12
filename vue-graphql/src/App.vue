@@ -1,23 +1,20 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import AppTitle from './components/AppTitle.vue'
+  import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
   <header>
-    <AppTitle msg="Laravue" />
-    <div>
       <nav>
-        <RouterLink to="/story">
-          Story
+        <RouterLink to="/">
+          Home
         </RouterLink>
-        <RouterLink to="/overview">
-          Overview
+
+        <RouterLink to="/hypothesis">
+          Hypothesis
         </RouterLink>
       </nav>
-    </div>
   </header>
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
 </template>
-
-
