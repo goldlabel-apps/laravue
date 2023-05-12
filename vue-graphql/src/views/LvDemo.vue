@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 import gql from 'graphql-tag'
 export default {
   apollo: {
@@ -8,7 +8,7 @@ export default {
     }`,
   },
 }
-</script>
+</script> -->
 
 <template>
     <div class="node">
@@ -18,7 +18,6 @@ export default {
             Aplollo GraphQL Demo
         </h2>
 
-        <div>{{ hello }}</div>
         <p>
           Vue microapp uses Apollo to query the <a
                 class="text-link"
